@@ -1,17 +1,26 @@
 
 public class Main {
 	public static void main(String[] args) {
-		Character c = new Wizard();
-		if (c instanceof SuperHero) {
-			SuperHero h  = (SuperHero)c;
-			h.fly();
+
+		// 新しく５体のキャラクターを生み出す
+		Character[] c = new Character[5];
+		c[0] = new Wizard();
+		c[1] = new Wizard();
+		c[2] = new Wizard();
+		c[3] = new Wizard();
+		c[4] = new Wizard();
+
+		// 全員のHPを回復する
+		for (Character ch:c) {
+			ch.hp += 50;
 		}
-		Wizard w = new Wizard();
-		Matango m = new Matango();
-		w.name = "アサカ";
-		w.attack(m);
-		w.fireball(m);
-		Slime s = new Slime();Monster mon = new Slime();
-		s.run(); mon.run();
+
+		Monster[] monsters = new Monster[3];
+		monsters[0] = new Slime();
+		monsters[1] = new Goblin();
+		monsters[2] = new DeathBat();
+		for (Monster m:monsters) {
+			m.run();
+		}
 	}
 }

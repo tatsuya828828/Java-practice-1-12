@@ -5,5 +5,5 @@ public abstract class Character {
 	public void run() {
 		System.out.println("逃げた！");
 	}
-	public abstract void attack(Matango m);
+	public abstract void attack(Monster m);
 }
